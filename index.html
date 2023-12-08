@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Donate ❤️</title>
+	<style>
+	
+
+body {
+
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+section {
+    max-width: 600px;
+    margin: auto;
+    padding: 2em;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+label {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+select, input {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #ecf0f1;
+    border-top: 1px solid #ddd;
+}
+
+@media only screen and (max-width: 600px) {
+    section {
+        padding: 1em;
+    }
+}
+/* Add animation to the section */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 2;
+    }
+}
+
+section {
+    max-width: 600px;
+    margin: auto;
+    padding: 2em;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: fadeIn 1s ease-out; 
+}
+
+/* Add hover effect for the button */
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+#commentSection {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.comment-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #495057;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+
+
+
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #ecf0f1;
+    border-top: 1px solid #ddd;
+}
+
+        
+          .kfds-btn-tertiary-light-s {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--btn-bg-gray-secondary);
+    color: var(--text-color);
+    padding: 6px 10px;
+    min-height: 34px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+         
+
+        .progress-container {
+            width: 300px;
+            height: 20px;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            width: 23%;
+            height: 100%;
+            background-color: #4CAF50; 
+            border-radius: 10px;
+        }
+    
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>Support Our Cause</h1>
+        <p>Your contribution makes a difference!❤️</p>
+    </header>
+     <section id="donationForm">
+        <label for="amount">Choose Amount:</label>
+        <select id="amount" name="amount">
+		<option value="custom">Custom Amount</option>
+            <option value="10">$10</option>
+            <option value="20">$20</option>
+            <option value="50">$50</option>
+            <option value="100">$100</option>
+            
+        </select>
+
+        <div id="customAmountInput">
+            <label for="customAmount">Custom Amount:</label>
+            <input type="number" id="customAmount" name="customAmount" min="1" placeholder="Enter custom amount">
+        </div>
+		
+		<div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+	<div class ="text-left kfds-btm-mrgn-8">
+	<span class="kfds-font-bold">23%</span>
+	<span class="goal-label">of goal</span>
+       <br>
+        <button onclick="submitDonation()">Donate Now</button>
+		<!-- Improved and styled comment section -->
+		
+
+   
+
+    <section id="commentSection">
+        
+
+        
+        <!-- Comment Form -->
+        <form id="commentForm">
+            <div class="form-group">
+                
+                <input type="text" id="commentName" name="commentName" placeholder="Your name or nick name" required>
+            </div>
+    
+            <div class="form-group">
+                
+                <textarea id="commentMessage" name="commentMessage" placeholder="Type your message here" required></textarea>
+            </div>
+    
+            <button type="button" onclick="submitComment()">Submit Comment</button>
+        </form>
+		        <div id="commentsContainer" class="comment-container"></div>
+    </section>
+
+    <script>
+        // Array to store posted comments
+        const commentsArray = [];
+
+        function submitComment() {
+            const name = document.getElementById('commentName').value;
+            const message = document.getElementById('commentMessage').value;
+
+            // Validate the form data
+            if (name.trim() === '' || message.trim() === '') {
+                alert('Please fill out both name and comment fields.');
+                return;
+            }
+
+            // Create a new comment object
+            const newComment = {
+                name: name,
+                message: message
+            };
+
+            // Add the new comment to the array
+            commentsArray.push(newComment);
+
+            // Update the comments list
+            updateCommentsList();
+
+            // Clear the form fields after submission
+            document.getElementById('commentName').value = '';
+            document.getElementById('commentMessage').value = '';
+        }
+
+        function updateCommentsList() {
+            const commentsContainer = document.getElementById('commentsContainer');
+
+            
+            commentsContainer.innerHTML = '';
+
+            
+            commentsArray.forEach(comment => {
+                const commentElement = document.createElement('div');
+                commentElement.classList.add('comment');
+
+                const nameLabel = document.createElement('strong');
+                nameLabel.textContent = comment.name + ': ';
+
+                const messageText = document.createElement('span');
+                messageText.textContent = comment.message;
+
+                commentElement.appendChild(nameLabel);
+                commentElement.appendChild(messageText);
+
+                commentsContainer.appendChild(commentElement);
+            });
+        }
+    </script>
+</body>
+</html>
+
+    <footer>
+        <p>&copy; 2023 crusader Organization</p>
+    </footer>
+
+   
+	<script>
+	
+function submitDonation() {
+    const selectedAmount = document.getElementById("amount").value;
+    const customAmount = document.getElementById("customAmount").value;
+
+    const donationAmount = selectedAmount === "custom" ? customAmount : selectedAmount;
+
+    // Validate and process the donation
+    if (isValidAmount(donationAmount)) {
+        alert(`Thank you for your donation of $${donationAmount}!`);
+        // Additional logic to handle the donation, e.g., send to server, integrate with payment gateway, etc.
+    } else {
+        alert("Please enter a valid donation amount.");
+    }
+}
+
+function isValidAmount(amount) {
+    return !isNaN(amount) && parseFloat(amount) >= 10;
+}
+// Add to script.js
+function submitDonation() {
+    const selectedAmount = document.getElementById("amount").value;
+    const customAmount = document.getElementById("customAmount").value;
+    const donationAmount = selectedAmount === "custom" ? customAmount : selectedAmount;
+
+    if (isValidAmount(donationAmount)) {
+        showLoading();
+        // Simulate a delay for demonstration purposes
+        setTimeout(() => {
+            alert(`Thank you for your donation of $${donationAmount}!`);
+            hideLoading();
+            // Additional logic to handle the donation, e.g., send to server, integrate with payment gateway, etc.
+        }, 2000);
+    } else {
+        alert("Please enter a valid donation amount.");
+    }
+}
+
+function showLoading() {
+    document.getElementById("donationForm").innerHTML = '<p>Processing your donation...</p>';
+}
+
+function hideLoading() {
+    // Restore the original form
+    document.getElementById("donationForm").innerHTML = `
+        <label for="amount">Choose Amount:</label>
+        <select id="amount" name="amount">
+            <option value="10">$10</option>
+            <option value="20">$20</option>
+            <option value="50">$50</option>
+            <option value="100">$100</option>
+            <option value="custom">Custom Amount</option>
+        </select>
+
+        <div id="customAmountInput">
+            <label for="customAmount">Custom Amount:</label>
+            <input type="number" id="customAmount" name="customAmount" min="1" placeholder="Enter custom amount">
+        </div>
+
+        <button onclick="submitDonation()">Donate Now</button>
+    `;
+}
+
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Date and Time </title>
+  <style>
+    #liveDateTime {
+      font-size: 20px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<div id="liveDateTime"></div>
+
+<script>
+function updateDateTime() {
+  // Create a new Date object
+  var now = new Date();
+
+  // Get the current date and time
+  var date = now.toLocaleDateString();
+  var time = now.toLocaleTimeString();
+
+  // Display the date and time in the specified HTML element
+  document.getElementById('liveDateTime').innerHTML = ' Date and Time: ' + date + ' ' + time;
+}
+
+// Update the date and time every second (1000 milliseconds)
+setInterval(updateDateTime, 1000);
+
+// Initial call to display the date and time immediately
+updateDateTime();
+</script>
+
+</body>
+</html>
